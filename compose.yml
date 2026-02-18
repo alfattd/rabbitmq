@@ -10,11 +10,12 @@ services:
       - data:/var/lib/rabbitmq
     restart: unless-stopped
     networks:
-      - ${NETWORK}
+      - net
 
 volumes:
   data:
 
 networks:
-  ${NETWORK}:
+  net:
+    name: ${NETWORK}
     external: true
