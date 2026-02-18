@@ -27,12 +27,18 @@ Before running RabbitMQ, create a Docker network:
 ```bash
 docker network create <name>
 ```
-exmple:
+example:
 ```bash
 docker network create net
 ```
 
-### 2. Setup Environment
+### 2. Clone Repository
+
+```bash
+git clone https://github.com/alfattd/rabbitmq.git
+```
+
+### 3. Setup Environment
 
 Copy the `.env.example` file to `.env` and customize the configuration if needed:
 
@@ -47,7 +53,7 @@ RABBITMQ_PASSWORD=rabbitmq
 NETWORK=net
 ```
 
-### 3. Run RabbitMQ
+### 4. Run RabbitMQ
 
 ```bash
 docker-compose up -d
